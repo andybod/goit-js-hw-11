@@ -48,8 +48,6 @@ function fetchImages() {
       onPageScrolling();
       lightbox.refresh();
       const { totalHits } = data;
-      console.log(refs.containerDiv.children.length);
-      console.log(totalHits);
       if (refs.containerDiv.children.length >= totalHits) {
         Notify.info(
           `We're sorry, but you've reached the end of search results.`
