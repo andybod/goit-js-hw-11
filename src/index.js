@@ -41,8 +41,6 @@ function fetchImages() {
         Notify.info(
           `Sorry, there are no images matching your search query: ${fetchImagesService.searchQuery}. Please try again.`
         );
-        const { totalHits } = data;
-        console.log(data);
         loadMoreBtn.hide();
         return;
       }
@@ -57,7 +55,7 @@ function fetchImages() {
         loadMoreBtn.hide();
       } else {
         loadMoreBtn.enable();
-        Notify.success(`Hooray! We found ${totalHits} images.`);
+        //   Notify.success(`Hooray! We found ${totalHits} images.`);
       }
     })
     .catch(handleError);
